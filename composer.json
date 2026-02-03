@@ -187,6 +187,22 @@
         ],
         "coverage": [
             "@php vendor/bin/phpunit -c phpunit.xml"
+        ],
+        "initiate": [
+            "@php artisan --no-interaction --no-ansi storage:link",
+            "@php artisan --no-interaction --no-ansi optimize:clear",
+            "@php artisan --no-interaction --no-ansi event:cache",
+            "@php artisan --no-interaction --no-ansi config:cache",
+            "@php artisan --no-interaction --no-ansi route:cache",
+            "@php artisan --no-interaction --no-ansi view:cache"
+        ],
+        "initiate:quiet": [
+            "@php artisan --quiet --no-interaction --no-ansi storage:link",
+            "@php artisan --quiet --no-interaction --no-ansi optimize:clear",
+            "@php artisan --quiet --no-interaction --no-ansi event:cache",
+            "@php artisan --quiet --no-interaction --no-ansi config:cache",
+            "@php artisan --quiet --no-interaction --no-ansi route:cache",
+            "@php artisan --quiet --no-interaction --no-ansi view:cache"
         ]
     },
     "config": {
