@@ -170,7 +170,7 @@ RUN --mount=type=cache,id=npm,target=/npm/store npm install --frozen-lockfile
 COPY --link . .
 
 RUN npm run prod --workspace=v1
-RUN npm run build --workspace=v2
+# RUN npm run build --workspace=v2
 
 ###########################################
 
